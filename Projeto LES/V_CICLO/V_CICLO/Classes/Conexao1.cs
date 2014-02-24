@@ -3,22 +3,24 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.Data;
 using FirebirdSql.Data.FirebirdClient;
 
 namespace V_CICLO.Classes
 {
     class Conexao1
     {
-        #region Objetos de Conexão e Acesso
+
+#region Objetos de Conexão e Acesso
 
         private static FbConnection _fbConn = new FbConnection();
         private static FbCommandBuilder _fbComm = new FbCommandBuilder();
         private FbCommand cmd = new FbCommand();
         private static String _strConn = "";
 
-        #endregion
+#endregion
 
-        #region GET & SET
+#region GET & SET
 
         public static FbConnection FbConn
         {
@@ -42,7 +44,7 @@ namespace V_CICLO.Classes
             get { return _strConn; }
         }
 
-        #endregion
+#endregion
 
         public void executaSql(string comando)
         {
@@ -65,6 +67,50 @@ namespace V_CICLO.Classes
             }
         }
 
+        public string retornaValorSql(string comando)
+        {
+            string retorno = "";
+            try
+            {
+                _fbConn.ConnectionString = _strConn;
+                _fbConn.Open();
+                cmd.Connection = _fbConn;
+                cmd.CommandText = comando;
+                retorno = cmd.ExecuteScalar().ToString();
+                _fbConn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                _fbConn.Close();
+            }
+            return retorno;
+        }
+
+        public DataTable retornaDt(string comando)
+        {
+            DataTable dt = new DataTable();
+
+            try
+            {
+                _fbConn.Open();
+                FbDataAdapter fbDa = new FbDataAdapter(comando, _fbConn);
+                fbDa.Fill(dt);
+                _fbConn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                _fbConn.Close();
+            }
+            return dt;
+        }
 
     }
 }
