@@ -56,6 +56,14 @@ namespace V_CICLO.Forms
             Conexao.Active(false);
         }
 
+        private void redimensionaGrid()
+        {
+            for(int i = 0; i < DtGridEstados.ColumnCount - 1; i++)
+            {
+                DtGridEstados.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            }            
+        }
+
 #endregion
 
         private void FrmEstados_Load(object sender, EventArgs e)
@@ -63,6 +71,7 @@ namespace V_CICLO.Forms
             DtGridEstados.ClearSelection();
             limparCampos();
             preencherDtGrid();
+            redimensionaGrid();
         }
 
         private void TxtSigla_Leave(object sender, EventArgs e)
@@ -148,6 +157,7 @@ namespace V_CICLO.Forms
             }
             Conexao.Active(false);
             limparCampos();
+            redimensionaGrid();
         }
 
         private void BtnExcluir_Click(object sender, EventArgs e)

@@ -36,12 +36,12 @@
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.DtGridEstados = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.BtnSair = new System.Windows.Forms.Button();
             this.BtnAlterar = new System.Windows.Forms.Button();
             this.BtnExcluir = new System.Windows.Forms.Button();
             this.BtnLimpar = new System.Windows.Forms.Button();
             this.BtnIncluir = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DtGridEstados)).BeginInit();
             this.panel1.SuspendLayout();
@@ -100,6 +100,7 @@
             this.DtGridEstados.Name = "DtGridEstados";
             this.DtGridEstados.Size = new System.Drawing.Size(238, 254);
             this.DtGridEstados.TabIndex = 13;
+            this.DtGridEstados.TabStop = false;
             this.DtGridEstados.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.DtGridEstados_CellEnter);
             // 
             // panel1
@@ -114,16 +115,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(107, 248);
             this.panel1.TabIndex = 14;
-            // 
-            // panel2
-            // 
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.DtGridEstados);
-            this.panel2.Controls.Add(this.panel1);
-            this.panel2.Location = new System.Drawing.Point(8, 85);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(375, 274);
-            this.panel2.TabIndex = 15;
             // 
             // BtnSair
             // 
@@ -188,6 +179,16 @@
             this.BtnIncluir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtnIncluir.UseVisualStyleBackColor = true;
             this.BtnIncluir.Click += new System.EventHandler(this.BtnIncluir_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.DtGridEstados);
+            this.panel2.Controls.Add(this.panel1);
+            this.panel2.Location = new System.Drawing.Point(8, 85);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(375, 274);
+            this.panel2.TabIndex = 15;
             // 
             // FrmEstados
             // 
