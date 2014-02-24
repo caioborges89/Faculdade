@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "V_CICLO", "V_CICLO\V_CICLO.csproj", "{428ABAE0-7154-4A83-AE86-289FFF47A519}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{428ABAE0-7154-4A83-AE86-289FFF47A519}.Debug|x86.ActiveCfg = Debug|x86
+		{428ABAE0-7154-4A83-AE86-289FFF47A519}.Debug|x86.Build.0 = Debug|x86
+		{428ABAE0-7154-4A83-AE86-289FFF47A519}.Release|x86.ActiveCfg = Release|x86
+		{428ABAE0-7154-4A83-AE86-289FFF47A519}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
