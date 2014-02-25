@@ -101,7 +101,8 @@
             this.DtGridEstados.Size = new System.Drawing.Size(238, 254);
             this.DtGridEstados.TabIndex = 13;
             this.DtGridEstados.TabStop = false;
-            this.DtGridEstados.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.DtGridEstados_CellEnter);
+            this.DtGridEstados.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DtGridEstados_CellDoubleClick);
+            
             // 
             // panel1
             // 

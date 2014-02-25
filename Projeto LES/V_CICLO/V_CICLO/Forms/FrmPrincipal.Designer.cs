@@ -76,13 +76,13 @@
             // funçãoToolStripMenuItem
             // 
             this.funçãoToolStripMenuItem.Name = "funçãoToolStripMenuItem";
-            this.funçãoToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.funçãoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.funçãoToolStripMenuItem.Text = "Função";
             // 
             // funcionarioToolStripMenuItem
             // 
             this.funcionarioToolStripMenuItem.Name = "funcionarioToolStripMenuItem";
-            this.funcionarioToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.funcionarioToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.funcionarioToolStripMenuItem.Text = "Funcionario";
             // 
             // dadosComunsToolStripMenuItem
@@ -106,6 +106,7 @@
             this.clienteToolStripMenuItem.Name = "clienteToolStripMenuItem";
             this.clienteToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.clienteToolStripMenuItem.Text = "Cliente";
+            this.clienteToolStripMenuItem.Click += new System.EventHandler(this.clienteToolStripMenuItem_Click);
             // 
             // sairToolStripMenuItem1
             // 

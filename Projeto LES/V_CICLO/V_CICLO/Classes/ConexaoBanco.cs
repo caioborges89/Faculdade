@@ -8,7 +8,7 @@ using FirebirdSql.Data.FirebirdClient;
 
 namespace V_CICLO.Classes
 {
-    class Conexao1
+    class ConexaoBanco
     {
 
 #region Objetos de Conexão e Acesso

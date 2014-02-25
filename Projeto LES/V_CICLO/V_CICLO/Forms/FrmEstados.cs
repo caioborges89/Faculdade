@@ -179,16 +179,11 @@ namespace V_CICLO.Forms
             }
         }
 
-        private void DtGridEstados_CellEnter(object sender, DataGridViewCellEventArgs e)
+        private void DtGridEstados_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             TxtSigla.Text = DtGridEstados.CurrentRow.Cells[0].Value.ToString();
             TxtNomeEstado.Text = DtGridEstados.CurrentRow.Cells[1].Value.ToString();
         }
-
-
-
-
-
 
     }
 }

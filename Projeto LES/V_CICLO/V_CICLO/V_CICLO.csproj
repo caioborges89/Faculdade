@@ -52,9 +52,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Classes\Conexao1.cs" />
+    <Compile Include="Classes\Cliente.cs" />
+    <Compile Include="Classes\ConexaoBanco.cs" />
     <Compile Include="Classes\Estado.cs" />
     <Compile Include="Classes\GeralVerificacoes.cs" />
+    <Compile Include="Forms\FrmCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmCliente.Designer.cs">
+      <DependentUpon>FrmCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FrmEstados.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,6 +83,9 @@
     <Compile Include="Outras\Conexao.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\FrmCliente.resx">
+      <DependentUpon>FrmCliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmEstados.resx">
       <DependentUpon>FrmEstados.cs</DependentUpon>
     </EmbeddedResource>

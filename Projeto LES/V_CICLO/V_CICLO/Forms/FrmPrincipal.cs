@@ -27,13 +27,15 @@ namespace V_CICLO
 
         private void sairToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmPrincipal_FormClosing(null, null);           
+            FrmPrincipal_FormClosing(null, null);
+            GC.Collect();
         }
 
         private void FrmPrincipal_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (MessageBox.Show("Deseja sair do sistema?", "Sistema", MessageBoxButtons.YesNo,MessageBoxIcon.Information) == DialogResult.Yes)
             {
+                GC.Collect();
                 this.Dispose();
             }
             else
@@ -57,6 +59,12 @@ namespace V_CICLO
         {
             FrmEstados _frmEstados = new FrmEstados();
             _frmEstados.ShowDialog();
+        }
+
+        private void clienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmCliente _frmCliente = new FrmCliente();
+            _frmCliente.ShowDialog();
         }
     }
 }
