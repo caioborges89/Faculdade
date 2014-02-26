@@ -7,8 +7,8 @@ namespace V_CICLO.Classes
 {
     class Cliente
     {
-        private int codigo, estado;
-        private string nome, documento;
+        private int codigo;
+        private string nome, documento, estado;
         private double limite;
         private DateTime dataAbertura;
 
@@ -18,7 +18,7 @@ namespace V_CICLO.Classes
             set { codigo = value; }
         }
 
-        public int Estado
+        public string Estado
         {
             get { return estado; }
             set { estado = value; }

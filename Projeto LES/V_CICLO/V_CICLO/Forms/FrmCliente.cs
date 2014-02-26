@@ -28,17 +28,11 @@ namespace V_CICLO.Forms
             return codigo;
         }
 
-        private int getCodEstado(string sigla)
-        {
-            int codigo = 0;
-            return codigo;
-        }
-
         private void setCampos()
         {
             cliente.Codigo = getMaxCodigo();
             cliente.Documento = TxtDocumento.Text;
-            cliente.Estado = getCodEstado(CbEstado.Text);
+            cliente.Estado = CbEstado.Text;
             cliente.Limite = double.Parse(TxtLimite.Text);
             cliente.Nome = TxtCliente.Text;
             cliente.DataAbertura = Convert.ToDateTime(MtxtDataAbertura.Text);
@@ -60,21 +54,47 @@ namespace V_CICLO.Forms
         {
             string stringSql = "" +
                                cliente.Codigo + ", " +
-                         "'" + cliente.Nome   + "', " +
-                               
+                         "'" + cliente.Nome + "', " +
+                         "'" + cliente.Estado + "', " +
+                               cliente.Limite + ", " +
+                               cliente.DataAbertura + ", " +
+                         "'" + cliente.Documento + "";
+
             return stringSql;
         }
 
 
 #endregion
-        
-
-        
+              
 
         private void BtSair_Click(object sender, EventArgs e)
         {
             GC.Collect();
             this.Dispose();
+        }
+
+        private void BtIncluir_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                conexaoBanco.executaSql("INSERT INTO CLIENTE(" + camposClientes() + ") VALUES(" + valoresInsert() + ")");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message );
+            }            
+        }
+
+        private void FrmCliente_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                DtGridClientes.DataSource = conexaoBanco.retornaDt("SELECT * FROM CLIENTE");
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }
