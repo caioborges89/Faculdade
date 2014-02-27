@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPrincipal));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.sistemaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.folhaDePagamentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -40,14 +42,23 @@
             this.sobreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.BtSair = new System.Windows.Forms.Button();
+            this.BtSobre = new System.Windows.Forms.Button();
+            this.BtFuncao = new System.Windows.Forms.Button();
+            this.BtFuncioanrios = new System.Windows.Forms.Button();
+            this.BtEstados = new System.Windows.Forms.Button();
+            this.BtCliente = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -144,78 +155,169 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.PaleGreen;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.button6);
-            this.panel1.Controls.Add(this.button5);
-            this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.BtSair);
+            this.panel1.Controls.Add(this.BtSobre);
+            this.panel1.Controls.Add(this.BtFuncao);
+            this.panel1.Controls.Add(this.BtFuncioanrios);
+            this.panel1.Controls.Add(this.BtEstados);
+            this.panel1.Controls.Add(this.BtCliente);
             this.panel1.Location = new System.Drawing.Point(0, 28);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(734, 100);
+            this.panel1.Size = new System.Drawing.Size(734, 105);
             this.panel1.TabIndex = 1;
             // 
-            // button1
+            // groupBox1
             // 
-            this.button1.Location = new System.Drawing.Point(12, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 91);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.groupBox1.BackColor = System.Drawing.Color.PaleGreen;
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Location = new System.Drawing.Point(4, 139);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(130, 189);
+            this.groupBox1.TabIndex = 2;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Atalhos";
             // 
-            // button2
+            // BtSair
             // 
-            this.button2.Location = new System.Drawing.Point(93, 4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 91);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.BtSair.Image = global::V_CICLO.Properties.Resources.sair1;
+            this.BtSair.Location = new System.Drawing.Point(408, 4);
+            this.BtSair.Name = "BtSair";
+            this.BtSair.Size = new System.Drawing.Size(75, 91);
+            this.BtSair.TabIndex = 5;
+            this.BtSair.Text = "Sair";
+            this.BtSair.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.BtSair.UseVisualStyleBackColor = true;
+            this.BtSair.Click += new System.EventHandler(this.BtSair_Click);
             // 
-            // button3
+            // BtSobre
             // 
-            this.button3.Location = new System.Drawing.Point(174, 4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 91);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.BtSobre.Image = global::V_CICLO.Properties.Resources.sobre;
+            this.BtSobre.Location = new System.Drawing.Point(327, 3);
+            this.BtSobre.Name = "BtSobre";
+            this.BtSobre.Size = new System.Drawing.Size(75, 91);
+            this.BtSobre.TabIndex = 4;
+            this.BtSobre.Text = "Sobre";
+            this.BtSobre.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.BtSobre.UseVisualStyleBackColor = true;
+            this.BtSobre.Click += new System.EventHandler(this.BtSobre_Click);
             // 
-            // button4
+            // BtFuncao
             // 
-            this.button4.Location = new System.Drawing.Point(255, 3);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 91);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
+            this.BtFuncao.Image = global::V_CICLO.Properties.Resources.funcao;
+            this.BtFuncao.Location = new System.Drawing.Point(246, 4);
+            this.BtFuncao.Name = "BtFuncao";
+            this.BtFuncao.Size = new System.Drawing.Size(75, 91);
+            this.BtFuncao.TabIndex = 3;
+            this.BtFuncao.Text = "Funcão";
+            this.BtFuncao.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.BtFuncao.UseVisualStyleBackColor = true;
+            this.BtFuncao.Click += new System.EventHandler(this.BtFuncao_Click);
             // 
-            // button5
+            // BtFuncioanrios
             // 
-            this.button5.Location = new System.Drawing.Point(336, 3);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 91);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "button5";
-            this.button5.UseVisualStyleBackColor = true;
+            this.BtFuncioanrios.Image = global::V_CICLO.Properties.Resources.funcionarios;
+            this.BtFuncioanrios.Location = new System.Drawing.Point(165, 4);
+            this.BtFuncioanrios.Name = "BtFuncioanrios";
+            this.BtFuncioanrios.Size = new System.Drawing.Size(75, 91);
+            this.BtFuncioanrios.TabIndex = 2;
+            this.BtFuncioanrios.Text = "Funcionários";
+            this.BtFuncioanrios.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.BtFuncioanrios.UseVisualStyleBackColor = true;
+            this.BtFuncioanrios.Click += new System.EventHandler(this.BtFuncioanrios_Click);
             // 
-            // button6
+            // BtEstados
             // 
-            this.button6.Location = new System.Drawing.Point(417, 4);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 91);
-            this.button6.TabIndex = 5;
-            this.button6.Text = "button6";
-            this.button6.UseVisualStyleBackColor = true;
+            this.BtEstados.Image = global::V_CICLO.Properties.Resources.mapa;
+            this.BtEstados.Location = new System.Drawing.Point(84, 4);
+            this.BtEstados.Name = "BtEstados";
+            this.BtEstados.Size = new System.Drawing.Size(75, 91);
+            this.BtEstados.TabIndex = 1;
+            this.BtEstados.Text = "Estados";
+            this.BtEstados.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.BtEstados.UseVisualStyleBackColor = true;
+            this.BtEstados.Click += new System.EventHandler(this.BtEstados_Click);
+            // 
+            // BtCliente
+            // 
+            this.BtCliente.Image = global::V_CICLO.Properties.Resources.clientes;
+            this.BtCliente.Location = new System.Drawing.Point(3, 3);
+            this.BtCliente.Name = "BtCliente";
+            this.BtCliente.Size = new System.Drawing.Size(75, 91);
+            this.BtCliente.TabIndex = 0;
+            this.BtCliente.Text = "Clientes";
+            this.BtCliente.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.BtCliente.UseVisualStyleBackColor = true;
+            this.BtCliente.Click += new System.EventHandler(this.BtCliente_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(9, 20);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(65, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "F1 - Clientes";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(9, 44);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(66, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "F2 - Estados";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(9, 66);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(88, 13);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "F3 - Funcionários";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(9, 89);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(64, 13);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "F4 - Função";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(9, 112);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(56, 13);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "F5 - Sobre";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(9, 135);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(46, 13);
+            this.label6.TabIndex = 5;
+            this.label6.Text = "F6 - Sair";
             // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(734, 462);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -228,6 +330,8 @@
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.panel1.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -247,12 +351,20 @@
         private System.Windows.Forms.ToolStripMenuItem estadoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem clienteToolStripMenuItem;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button BtSair;
+        private System.Windows.Forms.Button BtSobre;
+        private System.Windows.Forms.Button BtFuncao;
+        private System.Windows.Forms.Button BtFuncioanrios;
+        private System.Windows.Forms.Button BtEstados;
+        private System.Windows.Forms.Button BtCliente;
+        private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
     }
 }
 

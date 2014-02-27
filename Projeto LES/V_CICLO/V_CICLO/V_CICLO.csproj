@@ -55,6 +55,8 @@
     <Compile Include="Classes\Cliente.cs" />
     <Compile Include="Classes\ConexaoBanco.cs" />
     <Compile Include="Classes\Estado.cs" />
+    <Compile Include="Classes\Funcao.cs" />
+    <Compile Include="Classes\Funcionario.cs" />
     <Compile Include="Classes\GeralVerificacoes.cs" />
     <Compile Include="Forms\FrmCliente.cs">
       <SubType>Form</SubType>
@@ -143,6 +145,12 @@
     <None Include="imagens\limpar1.png" />
     <None Include="imagens\editar.png" />
     <None Include="imagens\sair.png" />
+    <None Include="imagens\clientes.png" />
+    <None Include="imagens\mapa.png" />
+    <None Include="imagens\funcionarios.png" />
+    <None Include="imagens\funcao.png" />
+    <None Include="imagens\sobre.png" />
+    <None Include="imagens\sair1.png" />
     <Content Include="imagens\voltar.png" />
   </ItemGroup>
   <ItemGroup />

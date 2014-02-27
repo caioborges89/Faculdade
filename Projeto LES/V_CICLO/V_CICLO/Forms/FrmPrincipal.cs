@@ -22,9 +22,9 @@ namespace V_CICLO
 
         private void FrmPrincipal_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.F1)
+            if (e.KeyCode == Keys.F6)
             {
-                FrmPrincipal_FormClosing(null, null);
+                BtSair.PerformClick();
             }
         }
 
@@ -35,21 +35,32 @@ namespace V_CICLO
         }
 
         private void FrmPrincipal_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            if (MessageBox.Show("Deseja sair do sistema?", "Sistema", MessageBoxButtons.YesNo,MessageBoxIcon.Information) == DialogResult.Yes)
+        {            
+            try
             {
-                GC.Collect();
-                this.Dispose();
+                if (MessageBox.Show("Deseja sair do sistema?", "Sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                {
+                    GC.Collect();
+                    this.Dispose();
+                }
+                else
+                {
+                    e.Cancel = true;
+                    this.Focus();
+                }
             }
-            else
+            catch (NullReferenceException ex)
             {
-                e.Cancel = true; 
+                MessageBox.Show(ex.Message);
             }
         }
 
         private void FrmPrincipal_Load(object sender, EventArgs e)
         {
             this.Text += " - Versão: " + Application.ProductVersion;
+            toolTip1.SetToolTip(BtCliente, "Cadastro de Clientes");
+            toolTip1.SetToolTip(BtEstados, "Cadastros de Estados");
+            this.Focus();
         }
 
         private void sobreToolStripMenuItem_Click(object sender, EventArgs e)
@@ -81,5 +92,36 @@ namespace V_CICLO
             FrmFuncao _frmFuncao = new FrmFuncao();
             _frmFuncao.ShowDialog();
         }
+
+        private void BtCliente_Click(object sender, EventArgs e)
+        {
+            clienteToolStripMenuItem_Click(null, null);
+        }
+
+        private void BtEstados_Click(object sender, EventArgs e)
+        {
+            estadoToolStripMenuItem_Click(null, null);
+        }
+
+        private void BtFuncioanrios_Click(object sender, EventArgs e)
+        {
+            funcionarioToolStripMenuItem_Click(null, null);
+        }
+
+        private void BtFuncao_Click(object sender, EventArgs e)
+        {
+            funçãoToolStripMenuItem_Click(null, null);
+        }
+
+        private void BtSobre_Click(object sender, EventArgs e)
+        {
+            sobreToolStripMenuItem_Click(null, null);
+        }
+
+        private void BtSair_Click(object sender, EventArgs e)
+        {
+            sairToolStripMenuItem_Click(null, null);
+        }
+
     }
 }
