@@ -40,20 +40,22 @@ namespace V_CICLO.Forms
 
         private void preencherDtGrid()
         {
-            Conexao.Active(true);
-            string strEstados = "SELECT * FROM ESTADO";
-            try
-            {
-                DataTable dt = new DataTable();
-                FbDataAdapter da = new FbDataAdapter(strEstados, Conexao.FbCnn);
-                da.Fill(dt);
-                DtGridEstados.DataSource = dt;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            Conexao.Active(false);
+            //Conexao.Active(true);
+            //string strEstados = "SELECT * FROM ESTADO";
+            //try
+            //{
+            //    DataTable dt = new DataTable();
+            //    FbDataAdapter da = new FbDataAdapter(strEstados, Conexao.FbCnn);
+            //    da.Fill(dt);
+            //    DtGridEstados.DataSource = dt;
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show(ex.Message);
+            //}
+            //Conexao.Active(false);
+            DtGridEstados.DataSource = conexao.retornaDt("SELECT * FROM ESTADO");
+
         }
 
         private void redimensionaGrid()
@@ -183,6 +185,7 @@ namespace V_CICLO.Forms
         {
             TxtSigla.Text = DtGridEstados.CurrentRow.Cells[0].Value.ToString();
             TxtNomeEstado.Text = DtGridEstados.CurrentRow.Cells[1].Value.ToString();
+            TxtSigla.Focus();
         }
 
     }

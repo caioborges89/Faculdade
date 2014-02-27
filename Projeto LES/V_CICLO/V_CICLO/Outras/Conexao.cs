@@ -49,5 +49,26 @@ namespace V_CICLO.Outras
                 return false;
             }
         }
+
+        public DataTable retornaDt(string comando)
+        {
+            DataTable dt = new DataTable();
+            Active(true);
+            try
+            {
+                //_fbConn = new FbConnection(_strConn);
+                //_fbConn.Open();
+                FbDataAdapter fbDa = new FbDataAdapter(comando, fbCnn);
+                fbDa.Fill(dt);
+                //_fbConn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            Active(false);
+            return dt;
+        }
+
     }
 }

@@ -68,6 +68,18 @@
     <Compile Include="Forms\FrmEstados.Designer.cs">
       <DependentUpon>FrmEstados.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FrmFuncao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmFuncao.Designer.cs">
+      <DependentUpon>FrmFuncao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmFuncionario.Designer.cs">
+      <DependentUpon>FrmFuncionario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FrmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +100,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmEstados.resx">
       <DependentUpon>FrmEstados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmFuncao.resx">
+      <DependentUpon>FrmFuncao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmFuncionario.resx">
+      <DependentUpon>FrmFuncionario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>

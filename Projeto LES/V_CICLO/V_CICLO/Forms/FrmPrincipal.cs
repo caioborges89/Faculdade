@@ -7,11 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using V_CICLO.Forms;
+using V_CICLO.Classes;
 
 namespace V_CICLO
 {
     public partial class FrmPrincipal : Form
     {
+        ConexaoBanco conexaoBanco = new ConexaoBanco();
+        
         public FrmPrincipal()
         {
             InitializeComponent();
@@ -65,6 +68,18 @@ namespace V_CICLO
         {
             FrmCliente _frmCliente = new FrmCliente();
             _frmCliente.ShowDialog();
+        }
+
+        private void funcionarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmFuncionario _frmFuncionario = new FrmFuncionario();
+            _frmFuncionario.ShowDialog();
+        }
+
+        private void funçãoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmFuncao _frmFuncao = new FrmFuncao();
+            _frmFuncao.ShowDialog();
         }
     }
 }

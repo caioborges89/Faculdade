@@ -91,10 +91,11 @@ namespace V_CICLO.Forms
             {
                 DtGridClientes.DataSource = conexaoBanco.retornaDt("SELECT * FROM CLIENTE");
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+           
         }
     }
 }
