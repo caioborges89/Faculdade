@@ -92,11 +92,11 @@
             this.BtnVoltar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnVoltar.Image = global::V_CICLO.Properties.Resources.voltar;
             this.BtnVoltar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnVoltar.Location = new System.Drawing.Point(438, 364);
+            this.BtnVoltar.Location = new System.Drawing.Point(438, 358);
             this.BtnVoltar.Name = "BtnVoltar";
-            this.BtnVoltar.Size = new System.Drawing.Size(79, 34);
+            this.BtnVoltar.Size = new System.Drawing.Size(79, 40);
             this.BtnVoltar.TabIndex = 4;
-            this.BtnVoltar.Text = "&Voltar";
+            this.BtnVoltar.Text = "&Sair";
             this.BtnVoltar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtnVoltar.UseVisualStyleBackColor = true;
             this.BtnVoltar.Click += new System.EventHandler(this.BtnVoltar_Click);

@@ -35,7 +35,7 @@ namespace V_CICLO
         }
 
         private void FrmPrincipal_FormClosing(object sender, FormClosingEventArgs e)
-        {            
+        {
             try
             {
                 if (MessageBox.Show("Deseja sair do sistema?", "Sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
@@ -45,8 +45,7 @@ namespace V_CICLO
                 }
                 else
                 {
-                    e.Cancel = true;
-                    this.Focus();
+                    this.Visible = true;
                 }
             }
             catch (NullReferenceException ex)

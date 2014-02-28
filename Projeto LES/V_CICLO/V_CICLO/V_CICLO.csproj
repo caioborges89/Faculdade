@@ -151,6 +151,7 @@
     <None Include="imagens\funcao.png" />
     <None Include="imagens\sobre.png" />
     <None Include="imagens\sair1.png" />
+    <None Include="imagens\pesquisar.png" />
     <Content Include="imagens\voltar.png" />
   </ItemGroup>
   <ItemGroup />

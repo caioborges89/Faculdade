@@ -87,12 +87,11 @@ namespace V_CICLO.Classes
         {
             try
             {
-                _fbConn.ConnectionString = StrConn;
-                _fbConn.Open();
+                Active(true);
                 cmd.Connection = _fbConn;
                 cmd.CommandText = comando;
                 cmd.ExecuteNonQuery();
-                _fbConn.Close();
+                Active(false);
             }
             catch(Exception ex)
             {
@@ -100,7 +99,7 @@ namespace V_CICLO.Classes
             }
             finally
             {
-                _fbConn.Close();
+                Active(false);
             }
         }
 
@@ -109,12 +108,11 @@ namespace V_CICLO.Classes
             string retorno = "";
             try
             {
-                _fbConn.ConnectionString = _strConn;
-                _fbConn.Open();
+                Active(true);
                 cmd.Connection = _fbConn;
                 cmd.CommandText = comando;
                 retorno = cmd.ExecuteScalar().ToString();
-                _fbConn.Close();
+                Active(false);
             }
             catch (Exception ex)
             {
@@ -122,7 +120,7 @@ namespace V_CICLO.Classes
             }
             finally
             {
-                _fbConn.Close();
+                Active(false);
             }
             return retorno;
         }
@@ -133,17 +131,17 @@ namespace V_CICLO.Classes
             Active(true);
             try
             {
-                //_fbConn = new FbConnection(_strConn);
-                //_fbConn.Open();
-                FbDataAdapter fbDa = new FbDataAdapter(comando,_fbConn );
+                FbDataAdapter fbDa = new FbDataAdapter(comando, _fbConn);
                 fbDa.Fill(dt);
-                //_fbConn.Close();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-            Active(false);
+            finally
+            {
+                Active(false);
+            }
             return dt;
         }
 
