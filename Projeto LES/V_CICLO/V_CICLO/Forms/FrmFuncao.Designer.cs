@@ -166,6 +166,7 @@
             this.TxtNome.Name = "TxtNome";
             this.TxtNome.Size = new System.Drawing.Size(277, 22);
             this.TxtNome.TabIndex = 0;
+            this.TxtNome.TextChanged += new System.EventHandler(this.TxtNome_TextChanged);
             // 
             // label1
             // 

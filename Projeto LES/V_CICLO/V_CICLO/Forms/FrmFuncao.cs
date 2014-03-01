@@ -92,10 +92,24 @@ namespace V_CICLO.Forms
 
         private void BtnIncluir_Click(object sender, EventArgs e)
         {
-            setCampos();
-            conexaoBanco.executaSql("INSERT INTO FUNCAO(" + camposInsert() + ") VALUES(" + valoresInsert() + ")");
-            atualizarGrid();
-            DtGridFuncao.Refresh();
+            if (TxtNome.Text != string.Empty)
+            {
+                setCampos();
+                conexaoBanco.executaSql("INSERT INTO FUNCAO(" + camposInsert() + ") VALUES(" + valoresInsert() + ")");
+                MessageBox.Show("Dados inseridos com sucesso!", "Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                atualizarGrid();
+                DtGridFuncao.Refresh();
+                limparObjetos();
+                TxtNome.Focus();
+            }
+            else
+            {
+                MessageBox.Show("O campo Nome está em branco.\n " +
+                                "Por favor informe um nome antes de inserir um novo registro.",
+                                "Sistema",MessageBoxButtons.OK ,MessageBoxIcon.Information);
+                TxtNome.Focus();
+            }
+            
         }
 
         private void BtnExcluir_Click(object sender, EventArgs e)
@@ -159,6 +173,11 @@ namespace V_CICLO.Forms
                 TxtNome.Focus();
             }
             
+        }
+
+        private void TxtNome_TextChanged(object sender, EventArgs e)
+        {
+            geralVerificacoes.caracteresMaiusculosTxt(TxtNome);
         }
 
     }

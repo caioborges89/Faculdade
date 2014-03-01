@@ -8,6 +8,9 @@ using FirebirdSql.Data.FirebirdClient;
 
 namespace V_CICLO.Classes
 {
+    /// <summary>
+    /// Classe responsavel por toda a parte de conexão do Banco de Dados
+    /// </summary>
     class ConexaoBanco
     {
 
@@ -49,6 +52,15 @@ namespace V_CICLO.Classes
             get { return _strConn; }
         }
 
+        /// <summary>
+        /// Método responsável por receber a string
+        /// de conexão do banco de dados e abrir a 
+        /// conexão com o mesmo.
+        /// </summary>
+        /// <param name="bActive"></param>
+        /// Recebe true para abrir a conexão com 
+        /// o banco e false para fechar a mesma.
+        /// <returns></returns>
         public static Boolean Active(Boolean bActive)
         {
             if (bActive)

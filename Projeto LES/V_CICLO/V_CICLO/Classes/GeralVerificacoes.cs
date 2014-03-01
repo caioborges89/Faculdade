@@ -6,6 +6,9 @@ using System.Windows.Forms;
 
 namespace V_CICLO.Classes
 {
+    /// <summary>
+    /// Classe responsavel verificações em geral do sistema
+    /// </summary>
     class GeralVerificacoes
     {
         public void verificaCampos(ErrorProvider errorProvider, TextBox textBox, string mensagem)
@@ -26,6 +29,13 @@ namespace V_CICLO.Classes
             {
                 dataGridView .Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             }   
+        }
+
+        public void caracteresMaiusculosTxt(TextBox textBox)
+        {
+            int posicao = textBox.SelectionStart;
+            textBox.Text = textBox.Text.ToUpper();
+            textBox.SelectionStart = posicao;
         }
     }
 }
