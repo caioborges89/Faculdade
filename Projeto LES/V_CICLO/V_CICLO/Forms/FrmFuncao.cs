@@ -13,6 +13,7 @@ namespace V_CICLO.Forms
     public partial class FrmFuncao : Form
     {
         ConexaoBanco conexaoBanco = new ConexaoBanco();
+        GeralVerificacoes geralVerificacoes = new GeralVerificacoes();
         Funcao funcao = new Funcao();
 
         public FrmFuncao()
@@ -85,6 +86,7 @@ namespace V_CICLO.Forms
         private void FrmFuncao_Load(object sender, EventArgs e)
         {
             atualizarGrid();
+            geralVerificacoes.redimensionaDtGrid(DtGridFuncao);
             toolTip1.SetToolTip(BtPesquisar, "Pesquisar");
         }
 
@@ -98,16 +100,26 @@ namespace V_CICLO.Forms
 
         private void BtnExcluir_Click(object sender, EventArgs e)
         {
-            conexaoBanco.executaSql("DELETE FROM FUNCAO WHERE Codigo = " + TxtCodigo.Text + "");
-            MessageBox.Show("Exclusão feita com sucesso!", "Informção", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            atualizarGrid();
-            limparObjetos();
-            TxtNome.Focus();
+            if (TxtCodigo.Text != "")
+            {
+                conexaoBanco.executaSql("DELETE FROM FUNCAO WHERE Codigo = " + TxtCodigo.Text + "");
+                MessageBox.Show("Exclusão feita com sucesso!", "Informção", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                geralVerificacoes.redimensionaDtGrid(DtGridFuncao);
+                atualizarGrid();
+                limparObjetos();
+                TxtNome.Focus();
+            }
+            else
+            {
+                MessageBox.Show("Pesquise uma função antes de fazer uma exclusão.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                TxtNome.Focus();
+            }            
         }
 
         private void BtPesquisar_Click(object sender, EventArgs e)
         {
             DtGridFuncao.DataSource =  conexaoBanco.retornaDt("SELECT * FROM FUNCAO WHERE NOME LIKE '" + TxtNome.Text + "%'");
+            geralVerificacoes.redimensionaDtGrid(DtGridFuncao);
         }
 
         private void BtnSair_Click_1(object sender, EventArgs e)
@@ -127,6 +139,26 @@ namespace V_CICLO.Forms
             TxtNome.Text = DtGridFuncao.CurrentRow.Cells["NOME"].Value.ToString();
             TxtCbo.Text = DtGridFuncao.CurrentRow.Cells["CBO"].Value.ToString();
             TxtSalario.Text = DtGridFuncao.CurrentRow.Cells["SALARIO"].Value.ToString();
+        }
+
+        private void BtnAlterar_Click(object sender, EventArgs e)
+        {
+            if (TxtCodigo.Text != "")
+            {
+                conexaoBanco.executaSql("UPDATE FUNCAO SET NOME = '" + TxtNome.Text + "', " +
+                                        "CBO = " + TxtCbo.Text + ", " + "SALARIO = " + TxtSalario.Text +
+                                        " WHERE CODIGO = " + TxtCodigo.Text);
+                MessageBox.Show("Alteração feita com sucesso!","Sistema",MessageBoxButtons.OK,MessageBoxIcon.Information );
+                atualizarGrid();
+                limparObjetos();
+                TxtNome.Focus();
+            }
+            else
+            {
+                MessageBox.Show("Pesquise uma função antes de fazer uma alteração.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                TxtNome.Focus();
+            }
+            
         }
 
     }

@@ -19,5 +19,13 @@ namespace V_CICLO.Classes
                 errorProvider.SetError(textBox, "");
             }
         }
+
+        public void redimensionaDtGrid(DataGridView dataGridView)
+        {
+            for (int i = 0; i < dataGridView .ColumnCount - 1; i++)
+            {
+                dataGridView .Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            }   
+        }
     }
 }
