@@ -53,9 +53,9 @@
             this.LblAutor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblAutor.Location = new System.Drawing.Point(145, 265);
             this.LblAutor.Name = "LblAutor";
-            this.LblAutor.Size = new System.Drawing.Size(75, 16);
+            this.LblAutor.Size = new System.Drawing.Size(159, 16);
             this.LblAutor.TabIndex = 1;
-            this.LblAutor.Text = "Caio Cesar";
+            this.LblAutor.Text = "Caio Cesar Alves Borges";
             // 
             // label3
             // 
@@ -79,7 +79,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::V_CICLO.Properties.Resources.beneath;
+            this.pictureBox1.Image = global::V_CICLO.Properties.Resources.binary;
             this.pictureBox1.Location = new System.Drawing.Point(39, 31);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(194, 191);

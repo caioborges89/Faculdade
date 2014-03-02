@@ -22,9 +22,41 @@ namespace V_CICLO.Forms
 
 #region Métodos
 
+        private void limparObjetos()
+        {
+            TxtCliente.Clear();
+            TxtDocumento.Clear();
+            TxtLimite.Clear();
+            CbEstado.Text = "";
+            TxtCodigo.Clear();
+            MtxtDataAbertura.Clear();
+            GC.Collect();
+            TxtCliente.Focus();
+        }
+
+        private void preencheCbEstado()
+        {
+            DataTable dtEstados = new DataTable();
+            dtEstados = conexaoBanco.retornaDt("SELECT DISTINCT(ESTADO) FROM ESTADO;");
+            foreach (DataRow dr in dtEstados.Rows)
+            {
+                CbEstado.Items.Add(dr[0]);
+            }
+        }
+
         private int getMaxCodigo()
         {
-            int codigo = 0;
+            Int32 codigo = 0;
+            int? max = null;
+            max = Int32.Parse(conexaoBanco.retornaValorSql("SELECT MAX(CODIGO) FROM CLIENTE;"));
+            if (max.HasValue == false)
+            {
+                codigo = 1;
+            }
+            else
+            {
+                codigo = (int)max + 1;
+            }
             return codigo;
         }
 
@@ -38,7 +70,13 @@ namespace V_CICLO.Forms
             cliente.DataAbertura = Convert.ToDateTime(MtxtDataAbertura.Text);
         }
 
-        private string camposClientes() /* Campos a serem inseridos na tabela Cliente */
+        /// <summary>
+        /// Campos a serem inseridos na tabela Cliente
+        /// </summary>
+        /// <returns> 
+        /// Retorna string com os campos a serem inseridos
+        /// </returns>
+        private string camposClientes()
         {
             string campos = "" +
                             "Codigo, " +
@@ -57,39 +95,25 @@ namespace V_CICLO.Forms
                          "'" + cliente.Nome + "', " +
                          "'" + cliente.Estado + "', " +
                                cliente.Limite + ", " +
-                               cliente.DataAbertura + ", " +
+                         "'" + cliente.DataAbertura.ToString("dd.MM.yyyy") + "', " +
                          "'" + cliente.Documento + "";
 
             return stringSql;
         }
 
+        private void atualizaDtGrid()
+        {
+            DtGridClientes.DataSource = conexaoBanco.retornaDt("SELECT * FROM CLIENTE");
+        }
 
 #endregion
-              
-
-        private void BtSair_Click(object sender, EventArgs e)
-        {
-            GC.Collect();
-            this.Dispose();
-        }
-
-        private void BtIncluir_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                conexaoBanco.executaSql("INSERT INTO CLIENTE(" + camposClientes() + ") VALUES(" + valoresInsert() + ")");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message );
-            }            
-        }
 
         private void FrmCliente_Load(object sender, EventArgs e)
         {
             try
             {
-                DtGridClientes.DataSource = conexaoBanco.retornaDt("SELECT * FROM CLIENTE");
+                atualizaDtGrid();
+                preencheCbEstado();
             }
             catch (Exception ex)
             {
@@ -97,5 +121,74 @@ namespace V_CICLO.Forms
             }
            
         }
+
+        private void BtnIncluir_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                setCampos();
+                conexaoBanco.executaSql("INSERT INTO CLIENTE(" + camposClientes() + ") VALUES(" + valoresInsert() + ")");
+                MessageBox.Show("Campos inseridos com sucesso!", "Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                atualizaDtGrid();
+                limparObjetos();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }     
+        }
+
+        private void BtnLimpar_Click(object sender, EventArgs e)
+        {
+            limparObjetos();
+        }
+
+        private void BtnExcluir_Click(object sender, EventArgs e)
+        {
+            conexaoBanco.executaSql("DELETE FROM CLIENTE WHERE CODIGO = " + TxtCodigo.Text);
+            MessageBox.Show("Registro excluido com sucesso!","Sistema",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            atualizaDtGrid();
+            limparObjetos();
+        }
+
+        private void DtGridClientes_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            TxtCodigo.Text = DtGridClientes.CurrentRow.Cells["CODIGO"].Value.ToString();
+            TxtCliente.Text = DtGridClientes.CurrentRow.Cells["NOME"].Value.ToString();
+            CbEstado.Text = DtGridClientes.CurrentRow.Cells["ESTADO"].Value.ToString();
+            TxtLimite.Text = DtGridClientes.CurrentRow.Cells["LIMITE"].Value.ToString();
+            MtxtDataAbertura.Text = DtGridClientes.CurrentRow.Cells["DATA_ABERTURA"].Value.ToString();
+            TxtDocumento.Text = DtGridClientes.CurrentRow.Cells["DOCUMENTO"].Value.ToString();
+        }
+
+        private void BtnAlterar_Click(object sender, EventArgs e)
+        {
+            setCampos();
+            conexaoBanco.executaSql("UPDATE CLIENTE " +
+                                    "SET CODIGO = " + cliente.Codigo + ", " +
+                                    "NOME = '" + cliente.Nome + "', " +
+                                    "ESTADO = '" + cliente.Estado + "', " +
+                                    "LIMITE = " + cliente.Limite + ", " +
+                                    "DATA_ABERTURA = '" + cliente.DataAbertura.ToString("dd.MM.yyyy") + "'," +
+                                    "DOCUMENTO = '" + cliente.Documento + "'");
+            atualizaDtGrid();
+            limparObjetos();
+        }
+
+        private void BtnSair_Click(object sender, EventArgs e)
+        {
+            GC.Collect();
+            this.Dispose();
+        }
+
+        private void FrmCliente_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                BtnSair_Click(null, null);
+            }
+        }
+
+
     }
 }

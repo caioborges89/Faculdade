@@ -28,363 +28,287 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.DtGridClientes = new DevComponents.DotNetBar.Controls.DataGridViewX();
-            this.panelEx1 = new DevComponents.DotNetBar.PanelEx();
-            this.panelEx2 = new DevComponents.DotNetBar.PanelEx();
-            this.CbEstado = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-            this.MtxtDataAbertura = new DevComponents.DotNetBar.Controls.MaskedTextBoxAdv();
-            this.BtSair = new DevComponents.DotNetBar.ButtonX();
-            this.BtAlterar = new DevComponents.DotNetBar.ButtonX();
-            this.btExcluir = new DevComponents.DotNetBar.ButtonX();
-            this.BtLimpar = new DevComponents.DotNetBar.ButtonX();
-            this.BtIncluir = new DevComponents.DotNetBar.ButtonX();
-            this.labelX5 = new DevComponents.DotNetBar.LabelX();
-            this.TxtDocumento = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.labelX4 = new DevComponents.DotNetBar.LabelX();
-            this.labelX3 = new DevComponents.DotNetBar.LabelX();
-            this.TxtLimite = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.labelX2 = new DevComponents.DotNetBar.LabelX();
-            this.labelX1 = new DevComponents.DotNetBar.LabelX();
-            this.TxtCliente = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.DtGridClientes = new System.Windows.Forms.DataGridView();
+            this.BtPesquisar = new System.Windows.Forms.Button();
+            this.BtnLimpar = new System.Windows.Forms.Button();
+            this.BtnIncluir = new System.Windows.Forms.Button();
+            this.BtnSair = new System.Windows.Forms.Button();
+            this.BtnExcluir = new System.Windows.Forms.Button();
+            this.BtnAlterar = new System.Windows.Forms.Button();
+            this.TxtCliente = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.CbEstado = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.LblLimite = new System.Windows.Forms.Label();
+            this.TxtLimite = new System.Windows.Forms.TextBox();
+            this.MtxtDataAbertura = new System.Windows.Forms.MaskedTextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.TxtDocumento = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.TxtCodigo = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.DtGridClientes)).BeginInit();
-            this.panelEx1.SuspendLayout();
-            this.panelEx2.SuspendLayout();
             this.SuspendLayout();
             // 
             // DtGridClientes
             // 
-            this.DtGridClientes.AllowUserToAddRows = false;
-            this.DtGridClientes.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DtGridClientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.DtGridClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DtGridClientes.DefaultCellStyle = dataGridViewCellStyle2;
-            this.DtGridClientes.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
-            this.DtGridClientes.Location = new System.Drawing.Point(12, 12);
+            this.DtGridClientes.Location = new System.Drawing.Point(12, 195);
             this.DtGridClientes.Name = "DtGridClientes";
-            this.DtGridClientes.ReadOnly = true;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DtGridClientes.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.DtGridClientes.Size = new System.Drawing.Size(626, 196);
-            this.DtGridClientes.TabIndex = 0;
+            this.DtGridClientes.Size = new System.Drawing.Size(506, 180);
+            this.DtGridClientes.TabIndex = 20;
+            this.DtGridClientes.TabStop = false;
+            this.DtGridClientes.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DtGridClientes_CellDoubleClick);
             // 
-            // panelEx1
+            // BtPesquisar
             // 
-            this.panelEx1.CanvasColor = System.Drawing.SystemColors.Control;
-            this.panelEx1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.panelEx1.Controls.Add(this.DtGridClientes);
-            this.panelEx1.DisabledBackColor = System.Drawing.Color.Empty;
-            this.panelEx1.Location = new System.Drawing.Point(0, 168);
-            this.panelEx1.Name = "panelEx1";
-            this.panelEx1.Size = new System.Drawing.Size(647, 218);
-            this.panelEx1.Style.Alignment = System.Drawing.StringAlignment.Center;
-            this.panelEx1.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
-            this.panelEx1.Style.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
-            this.panelEx1.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
-            this.panelEx1.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
-            this.panelEx1.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
-            this.panelEx1.Style.GradientAngle = 90;
-            this.panelEx1.TabIndex = 1;
+            this.BtPesquisar.Image = global::V_CICLO.Properties.Resources.pesquisar;
+            this.BtPesquisar.Location = new System.Drawing.Point(21, 131);
+            this.BtPesquisar.Name = "BtPesquisar";
+            this.BtPesquisar.Size = new System.Drawing.Size(49, 40);
+            this.BtPesquisar.TabIndex = 5;
+            this.BtPesquisar.UseVisualStyleBackColor = true;
             // 
-            // panelEx2
+            // BtnLimpar
             // 
-            this.panelEx2.CanvasColor = System.Drawing.SystemColors.Control;
-            this.panelEx2.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.panelEx2.Controls.Add(this.CbEstado);
-            this.panelEx2.Controls.Add(this.MtxtDataAbertura);
-            this.panelEx2.Controls.Add(this.BtSair);
-            this.panelEx2.Controls.Add(this.BtAlterar);
-            this.panelEx2.Controls.Add(this.btExcluir);
-            this.panelEx2.Controls.Add(this.BtLimpar);
-            this.panelEx2.Controls.Add(this.BtIncluir);
-            this.panelEx2.Controls.Add(this.labelX5);
-            this.panelEx2.Controls.Add(this.TxtDocumento);
-            this.panelEx2.Controls.Add(this.labelX4);
-            this.panelEx2.Controls.Add(this.labelX3);
-            this.panelEx2.Controls.Add(this.TxtLimite);
-            this.panelEx2.Controls.Add(this.labelX2);
-            this.panelEx2.Controls.Add(this.labelX1);
-            this.panelEx2.Controls.Add(this.TxtCliente);
-            this.panelEx2.DisabledBackColor = System.Drawing.Color.Empty;
-            this.panelEx2.Location = new System.Drawing.Point(0, 1);
-            this.panelEx2.Name = "panelEx2";
-            this.panelEx2.Size = new System.Drawing.Size(647, 164);
-            this.panelEx2.Style.Alignment = System.Drawing.StringAlignment.Center;
-            this.panelEx2.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
-            this.panelEx2.Style.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
-            this.panelEx2.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
-            this.panelEx2.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
-            this.panelEx2.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
-            this.panelEx2.Style.GradientAngle = 90;
-            this.panelEx2.TabIndex = 2;
+            this.BtnLimpar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnLimpar.Image = global::V_CICLO.Properties.Resources.limpar1;
+            this.BtnLimpar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnLimpar.Location = new System.Drawing.Point(181, 131);
+            this.BtnLimpar.Name = "BtnLimpar";
+            this.BtnLimpar.Size = new System.Drawing.Size(75, 40);
+            this.BtnLimpar.TabIndex = 7;
+            this.BtnLimpar.Text = "Limpar";
+            this.BtnLimpar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnLimpar.UseVisualStyleBackColor = true;
+            this.BtnLimpar.Click += new System.EventHandler(this.BtnLimpar_Click);
             // 
-            // CbEstado
+            // BtnIncluir
             // 
-            this.CbEstado.DisplayMember = "Text";
-            this.CbEstado.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.CbEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CbEstado.FormattingEnabled = true;
-            this.CbEstado.ItemHeight = 16;
-            this.CbEstado.Location = new System.Drawing.Point(257, 32);
-            this.CbEstado.Name = "CbEstado";
-            this.CbEstado.Size = new System.Drawing.Size(67, 22);
-            this.CbEstado.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.CbEstado.TabIndex = 1;
+            this.BtnIncluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnIncluir.Image = global::V_CICLO.Properties.Resources.incluir;
+            this.BtnIncluir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnIncluir.Location = new System.Drawing.Point(100, 131);
+            this.BtnIncluir.Name = "BtnIncluir";
+            this.BtnIncluir.Size = new System.Drawing.Size(75, 40);
+            this.BtnIncluir.TabIndex = 6;
+            this.BtnIncluir.Text = "Incluir";
+            this.BtnIncluir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnIncluir.UseVisualStyleBackColor = true;
+            this.BtnIncluir.Click += new System.EventHandler(this.BtnIncluir_Click);
             // 
-            // MtxtDataAbertura
+            // BtnSair
             // 
+            this.BtnSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnSair.Image = global::V_CICLO.Properties.Resources.sair;
+            this.BtnSair.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnSair.Location = new System.Drawing.Point(424, 131);
+            this.BtnSair.Name = "BtnSair";
+            this.BtnSair.Size = new System.Drawing.Size(75, 40);
+            this.BtnSair.TabIndex = 10;
+            this.BtnSair.Text = "Sair";
+            this.BtnSair.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnSair.UseVisualStyleBackColor = true;
+            this.BtnSair.Click += new System.EventHandler(this.BtnSair_Click);
             // 
+            // BtnExcluir
             // 
+            this.BtnExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnExcluir.Image = global::V_CICLO.Properties.Resources.excluir;
+            this.BtnExcluir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnExcluir.Location = new System.Drawing.Point(262, 131);
+            this.BtnExcluir.Name = "BtnExcluir";
+            this.BtnExcluir.Size = new System.Drawing.Size(75, 40);
+            this.BtnExcluir.TabIndex = 8;
+            this.BtnExcluir.Text = "Excluir";
+            this.BtnExcluir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnExcluir.UseVisualStyleBackColor = true;
+            this.BtnExcluir.Click += new System.EventHandler(this.BtnExcluir_Click);
             // 
-            this.MtxtDataAbertura.BackgroundStyle.Class = "TextBoxBorder";
-            this.MtxtDataAbertura.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.MtxtDataAbertura.ButtonClear.Visible = true;
-            this.MtxtDataAbertura.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MtxtDataAbertura.Location = new System.Drawing.Point(438, 34);
-            this.MtxtDataAbertura.Mask = "00/00/0000";
-            this.MtxtDataAbertura.Name = "MtxtDataAbertura";
-            this.MtxtDataAbertura.Size = new System.Drawing.Size(100, 19);
-            this.MtxtDataAbertura.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.MtxtDataAbertura.TabIndex = 3;
-            this.MtxtDataAbertura.Text = "";
-            this.MtxtDataAbertura.ValidatingType = typeof(System.DateTime);
+            // BtnAlterar
             // 
-            // BtSair
-            // 
-            this.BtSair.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.BtSair.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.BtSair.Image = global::V_CICLO.Properties.Resources.sair;
-            this.BtSair.Location = new System.Drawing.Point(423, 117);
-            this.BtSair.Name = "BtSair";
-            this.BtSair.Size = new System.Drawing.Size(70, 35);
-            this.BtSair.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.BtSair.TabIndex = 9;
-            this.BtSair.Text = "Sair";
-            this.BtSair.TextAlignment = DevComponents.DotNetBar.eButtonTextAlignment.Right;
-            this.BtSair.Click += new System.EventHandler(this.BtSair_Click);
-            // 
-            // BtAlterar
-            // 
-            this.BtAlterar.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.BtAlterar.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.BtAlterar.Image = global::V_CICLO.Properties.Resources.editar;
-            this.BtAlterar.Location = new System.Drawing.Point(347, 117);
-            this.BtAlterar.Name = "BtAlterar";
-            this.BtAlterar.Size = new System.Drawing.Size(70, 35);
-            this.BtAlterar.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.BtAlterar.TabIndex = 8;
-            this.BtAlterar.Text = "Alterar";
-            this.BtAlterar.TextAlignment = DevComponents.DotNetBar.eButtonTextAlignment.Right;
-            // 
-            // btExcluir
-            // 
-            this.btExcluir.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btExcluir.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btExcluir.Image = global::V_CICLO.Properties.Resources.excluir;
-            this.btExcluir.Location = new System.Drawing.Point(271, 117);
-            this.btExcluir.Name = "btExcluir";
-            this.btExcluir.Size = new System.Drawing.Size(70, 35);
-            this.btExcluir.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btExcluir.TabIndex = 7;
-            this.btExcluir.Text = "Excluir";
-            this.btExcluir.TextAlignment = DevComponents.DotNetBar.eButtonTextAlignment.Right;
-            // 
-            // BtLimpar
-            // 
-            this.BtLimpar.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.BtLimpar.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.BtLimpar.Image = global::V_CICLO.Properties.Resources.limpar1;
-            this.BtLimpar.Location = new System.Drawing.Point(195, 117);
-            this.BtLimpar.Name = "BtLimpar";
-            this.BtLimpar.Size = new System.Drawing.Size(70, 35);
-            this.BtLimpar.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.BtLimpar.TabIndex = 6;
-            this.BtLimpar.Text = "Limpar";
-            this.BtLimpar.TextAlignment = DevComponents.DotNetBar.eButtonTextAlignment.Right;
-            // 
-            // BtIncluir
-            // 
-            this.BtIncluir.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.BtIncluir.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.BtIncluir.Image = global::V_CICLO.Properties.Resources.incluir;
-            this.BtIncluir.Location = new System.Drawing.Point(119, 117);
-            this.BtIncluir.Name = "BtIncluir";
-            this.BtIncluir.Size = new System.Drawing.Size(70, 35);
-            this.BtIncluir.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.BtIncluir.TabIndex = 5;
-            this.BtIncluir.Text = "Incluir";
-            this.BtIncluir.TextAlignment = DevComponents.DotNetBar.eButtonTextAlignment.Right;
-            this.BtIncluir.Click += new System.EventHandler(this.BtIncluir_Click);
-            // 
-            // labelX5
-            // 
-            // 
-            // 
-            // 
-            this.labelX5.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX5.Location = new System.Drawing.Point(544, 8);
-            this.labelX5.Name = "labelX5";
-            this.labelX5.Size = new System.Drawing.Size(75, 23);
-            this.labelX5.TabIndex = 9;
-            this.labelX5.Text = "Documento:";
-            // 
-            // TxtDocumento
-            // 
-            // 
-            // 
-            // 
-            this.TxtDocumento.Border.Class = "TextBoxBorder";
-            this.TxtDocumento.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.TxtDocumento.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtDocumento.Location = new System.Drawing.Point(544, 32);
-            this.TxtDocumento.Name = "TxtDocumento";
-            this.TxtDocumento.PreventEnterBeep = true;
-            this.TxtDocumento.Size = new System.Drawing.Size(100, 22);
-            this.TxtDocumento.TabIndex = 4;
-            // 
-            // labelX4
-            // 
-            // 
-            // 
-            // 
-            this.labelX4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX4.Location = new System.Drawing.Point(438, 8);
-            this.labelX4.Name = "labelX4";
-            this.labelX4.Size = new System.Drawing.Size(100, 23);
-            this.labelX4.TabIndex = 7;
-            this.labelX4.Text = "Data Abertura:";
-            // 
-            // labelX3
-            // 
-            // 
-            // 
-            // 
-            this.labelX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX3.Location = new System.Drawing.Point(332, 8);
-            this.labelX3.Name = "labelX3";
-            this.labelX3.Size = new System.Drawing.Size(75, 23);
-            this.labelX3.TabIndex = 5;
-            this.labelX3.Text = "Limite:";
-            // 
-            // TxtLimite
-            // 
-            // 
-            // 
-            // 
-            this.TxtLimite.Border.Class = "TextBoxBorder";
-            this.TxtLimite.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.TxtLimite.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtLimite.Location = new System.Drawing.Point(332, 32);
-            this.TxtLimite.Name = "TxtLimite";
-            this.TxtLimite.PreventEnterBeep = true;
-            this.TxtLimite.Size = new System.Drawing.Size(100, 22);
-            this.TxtLimite.TabIndex = 2;
-            // 
-            // labelX2
-            // 
-            // 
-            // 
-            // 
-            this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX2.Location = new System.Drawing.Point(257, 8);
-            this.labelX2.Name = "labelX2";
-            this.labelX2.Size = new System.Drawing.Size(60, 23);
-            this.labelX2.TabIndex = 3;
-            this.labelX2.Text = "Estado:";
-            // 
-            // labelX1
-            // 
-            // 
-            // 
-            // 
-            this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX1.Location = new System.Drawing.Point(8, 8);
-            this.labelX1.Name = "labelX1";
-            this.labelX1.Size = new System.Drawing.Size(90, 23);
-            this.labelX1.TabIndex = 1;
-            this.labelX1.Text = "Nome Cliente:";
+            this.BtnAlterar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnAlterar.Image = global::V_CICLO.Properties.Resources.editar;
+            this.BtnAlterar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnAlterar.Location = new System.Drawing.Point(343, 131);
+            this.BtnAlterar.Name = "BtnAlterar";
+            this.BtnAlterar.Size = new System.Drawing.Size(75, 40);
+            this.BtnAlterar.TabIndex = 9;
+            this.BtnAlterar.Text = "Alterar";
+            this.BtnAlterar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnAlterar.UseVisualStyleBackColor = true;
+            this.BtnAlterar.Click += new System.EventHandler(this.BtnAlterar_Click);
             // 
             // TxtCliente
             // 
-            // 
-            // 
-            // 
-            this.TxtCliente.Border.Class = "TextBoxBorder";
-            this.TxtCliente.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.TxtCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtCliente.Location = new System.Drawing.Point(8, 32);
+            this.TxtCliente.Location = new System.Drawing.Point(107, 26);
             this.TxtCliente.Name = "TxtCliente";
-            this.TxtCliente.PreventEnterBeep = true;
-            this.TxtCliente.Size = new System.Drawing.Size(234, 22);
+            this.TxtCliente.Size = new System.Drawing.Size(299, 22);
             this.TxtCliente.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(104, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(92, 16);
+            this.label1.TabIndex = 20;
+            this.label1.Text = "Nome Cliente:";
+            // 
+            // CbEstado
+            // 
+            this.CbEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CbEstado.FormattingEnabled = true;
+            this.CbEstado.Location = new System.Drawing.Point(412, 26);
+            this.CbEstado.Name = "CbEstado";
+            this.CbEstado.Size = new System.Drawing.Size(95, 24);
+            this.CbEstado.TabIndex = 1;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(409, 7);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(54, 16);
+            this.label2.TabIndex = 22;
+            this.label2.Text = "Estado:";
+            // 
+            // LblLimite
+            // 
+            this.LblLimite.AutoSize = true;
+            this.LblLimite.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblLimite.Location = new System.Drawing.Point(9, 56);
+            this.LblLimite.Name = "LblLimite";
+            this.LblLimite.Size = new System.Drawing.Size(46, 16);
+            this.LblLimite.TabIndex = 24;
+            this.LblLimite.Text = "Limite:";
+            // 
+            // TxtLimite
+            // 
+            this.TxtLimite.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtLimite.Location = new System.Drawing.Point(12, 77);
+            this.TxtLimite.Name = "TxtLimite";
+            this.TxtLimite.Size = new System.Drawing.Size(117, 22);
+            this.TxtLimite.TabIndex = 2;
+            // 
+            // MtxtDataAbertura
+            // 
+            this.MtxtDataAbertura.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MtxtDataAbertura.Location = new System.Drawing.Point(140, 77);
+            this.MtxtDataAbertura.Mask = "00/00/0000";
+            this.MtxtDataAbertura.Name = "MtxtDataAbertura";
+            this.MtxtDataAbertura.Size = new System.Drawing.Size(100, 22);
+            this.MtxtDataAbertura.TabIndex = 3;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(144, 58);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(94, 16);
+            this.label3.TabIndex = 26;
+            this.label3.Text = "Data Abertura:";
+            // 
+            // TxtDocumento
+            // 
+            this.TxtDocumento.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtDocumento.Location = new System.Drawing.Point(250, 77);
+            this.TxtDocumento.Name = "TxtDocumento";
+            this.TxtDocumento.Size = new System.Drawing.Size(100, 22);
+            this.TxtDocumento.TabIndex = 4;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(250, 57);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(80, 16);
+            this.label4.TabIndex = 28;
+            this.label4.Text = "Documento:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(9, 5);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(55, 16);
+            this.label5.TabIndex = 30;
+            this.label5.Text = "Codigo:";
+            // 
+            // TxtCodigo
+            // 
+            this.TxtCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtCodigo.Location = new System.Drawing.Point(12, 26);
+            this.TxtCodigo.Name = "TxtCodigo";
+            this.TxtCodigo.ReadOnly = true;
+            this.TxtCodigo.Size = new System.Drawing.Size(89, 22);
+            this.TxtCodigo.TabIndex = 29;
             // 
             // FrmCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(650, 387);
-            this.Controls.Add(this.panelEx2);
-            this.Controls.Add(this.panelEx1);
+            this.ClientSize = new System.Drawing.Size(531, 387);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.TxtCodigo);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.TxtDocumento);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.MtxtDataAbertura);
+            this.Controls.Add(this.LblLimite);
+            this.Controls.Add(this.TxtLimite);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.CbEstado);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.TxtCliente);
+            this.Controls.Add(this.BtPesquisar);
+            this.Controls.Add(this.BtnLimpar);
+            this.Controls.Add(this.BtnIncluir);
+            this.Controls.Add(this.BtnSair);
+            this.Controls.Add(this.BtnExcluir);
+            this.Controls.Add(this.BtnAlterar);
+            this.Controls.Add(this.DtGridClientes);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.KeyPreview = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CLIENTES";
             this.Load += new System.EventHandler(this.FrmCliente_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmCliente_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.DtGridClientes)).EndInit();
-            this.panelEx1.ResumeLayout(false);
-            this.panelEx2.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private DevComponents.DotNetBar.Controls.DataGridViewX DtGridClientes;
-        private DevComponents.DotNetBar.PanelEx panelEx1;
-        private DevComponents.DotNetBar.PanelEx panelEx2;
-        private DevComponents.DotNetBar.LabelX labelX5;
-        private DevComponents.DotNetBar.Controls.TextBoxX TxtDocumento;
-        private DevComponents.DotNetBar.LabelX labelX4;
-        private DevComponents.DotNetBar.LabelX labelX3;
-        private DevComponents.DotNetBar.Controls.TextBoxX TxtLimite;
-        private DevComponents.DotNetBar.LabelX labelX2;
-        private DevComponents.DotNetBar.LabelX labelX1;
-        private DevComponents.DotNetBar.Controls.TextBoxX TxtCliente;
-        private DevComponents.DotNetBar.Controls.MaskedTextBoxAdv MtxtDataAbertura;
-        private DevComponents.DotNetBar.ButtonX BtSair;
-        private DevComponents.DotNetBar.ButtonX BtAlterar;
-        private DevComponents.DotNetBar.ButtonX btExcluir;
-        private DevComponents.DotNetBar.ButtonX BtLimpar;
-        private DevComponents.DotNetBar.ButtonX BtIncluir;
-        private DevComponents.DotNetBar.Controls.ComboBoxEx CbEstado;
+        private System.Windows.Forms.DataGridView DtGridClientes;
+        private System.Windows.Forms.Button BtPesquisar;
+        private System.Windows.Forms.Button BtnLimpar;
+        private System.Windows.Forms.Button BtnIncluir;
+        private System.Windows.Forms.Button BtnSair;
+        private System.Windows.Forms.Button BtnExcluir;
+        private System.Windows.Forms.Button BtnAlterar;
+        private System.Windows.Forms.TextBox TxtCliente;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox CbEstado;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label LblLimite;
+        private System.Windows.Forms.TextBox TxtLimite;
+        private System.Windows.Forms.MaskedTextBox MtxtDataAbertura;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox TxtDocumento;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox TxtCodigo;
     }
 }

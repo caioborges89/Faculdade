@@ -152,6 +152,7 @@
     <None Include="imagens\sobre.png" />
     <None Include="imagens\sair1.png" />
     <None Include="imagens\pesquisar.png" />
+    <None Include="imagens\binary.jpg" />
     <Content Include="imagens\voltar.png" />
   </ItemGroup>
   <ItemGroup />

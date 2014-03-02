@@ -22,7 +22,27 @@ namespace V_CICLO
 
         private void FrmPrincipal_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.F6)
+            if (e.KeyCode == Keys.F1)
+            {
+                BtCliente.PerformClick();
+            }
+            else if (e.KeyCode == Keys.F2)
+            {
+                BtEstados.PerformClick();
+            }
+            else if (e.KeyCode == Keys.F3)
+            {
+                BtFuncioanrios.PerformClick();
+            }
+            else if(e.KeyCode == Keys.F4)
+            {
+                BtFuncao.PerformClick();
+            }
+            else if(e.KeyCode == Keys.F5)
+            {
+                BtSobre.PerformClick();
+            }
+            else if (e.KeyCode == Keys.F6)
             {
                 BtSair.PerformClick();
             }
