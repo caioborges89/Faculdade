@@ -102,6 +102,7 @@ namespace V_CICLO.Classes
                 Active(true);
                 cmd.Connection = _fbConn;
                 cmd.CommandText = comando;
+                Clipboard.SetText(comando);
                 cmd.ExecuteNonQuery();
                 Active(false);
             }
